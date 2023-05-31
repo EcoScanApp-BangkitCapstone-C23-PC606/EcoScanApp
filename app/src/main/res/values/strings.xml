@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EconScan</string>
+    <string name="home">Home</string>
+    <string name="camera">Camera</string>
+    <string name="detail">Detail</string>
+    <string name="splashScreenName">EcoScan\n</string>
+    <string name="string_home">HomePage\n</string>
+</resources>
