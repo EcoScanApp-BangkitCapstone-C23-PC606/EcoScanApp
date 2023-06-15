@@ -17,4 +17,10 @@
         android:name="com.dicoding.econscan.ui.scanner.MediaUploadFragment"
         android:label="@string/camera"
         tools:layout="@layout/activity_camera" />
+
+    <fragment
+        android:id="@+id/navigation_tip"
+        android:name="com.dicoding.econscan.ui.tp.TipFragment"
+        android:label="@string/tip"
+        tools:layout="@layout/activity_camera" />
 </navigation>

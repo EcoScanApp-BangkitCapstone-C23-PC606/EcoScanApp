@@ -16,10 +16,9 @@
 
         <ImageButton
             android:id="@+id/captureImage"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,11 +27,10 @@
 
         <ImageButton
             android:id="@+id/switchCamera"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/border"
             app:layout_constraintEnd_toEndOf="@+id/viewFinder"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_baseline_flip_camera_android_24" />

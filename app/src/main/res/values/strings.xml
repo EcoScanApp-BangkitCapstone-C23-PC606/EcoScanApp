@@ -5,4 +5,12 @@
     <string name="detail">Detail</string>
     <string name="splashScreenName">EcoScan\n</string>
     <string name="string_home">HomePage\n</string>
+    <string name="setting">setting</string>
+    <string name="tip">tip</string>
+    <string name="anorganikDeskripsi">Sampah anorganik adalah sampah yang terdiri atas bahan - bahan anorganik. contoh bahan - bahan anorganik adalah bahan logam, plastic, kaca, karet, kaleng, dll. Sifat sampah anorganik adalah tahan lama dan sukar membusuk. Sampah ini tidak mudah diuraikan oleh mikroorganisme tanah. apabila dibuang sembarangan, sampah anorganik dapat menimbulkan pencemaran tanah.</string>
+    <string name="organikDeskripsi">Sampah organik adalah sampah yang terdiri atas bahan bahan organik. sifat sampah organic adalah tidak tahan lama dan cepat membusuk. biasanya sampah jenis ini berasal dari makhluk hidup. contohnya adalah sayur - sayuran, buah buah yang membusuk, sisa nasi, daun, dan sebagainya. sampah organik mudah diuraikan mikroorganisme tanah, hanya saja jenis sampah akan menimbulkan bau kurang sedap jika tidak dikelola dengan baik</string>
+    <string name="reuse">Reuse yang berarti menggunakan kembali. Tahap ini mengajak untuk menggunakan kembali produk yang sudah terpakai. Dengan menggunakannya kembali maka sampah yang timbul dari produk-produk tersebut dapat berkurang</string>
+    <string name="recycle">Recycle yang berarti mendaur ulang. Langkah ini paling banyak dilakukan mengingat sudah banyaknya sampah yang tersebar di berbagai lokasi seperti laut, tanah, dan udara</string>
+    <string name="reduce">Reduce sendiri memiliki arti mengurangi sampah. Maksud dari langkah ini adalah mengurangi penggunaan produk yang nantinya berpotensi menjadi sampah</string>
+    <string name="ecobrick">Bagi Anda yang awam pasti kurang memahami arti dari “Ecobrick”. Ini merupakan botol plastik yang diisi dengan limbah non-biological untuk membuat blok bangunan yang nantinya bisa dipakai kembali. Ecobrick merupakan cara terbaik mengolah limbah plastik agar tidak berujung pada tempat pembuangan akhir.</string>
 </resources>

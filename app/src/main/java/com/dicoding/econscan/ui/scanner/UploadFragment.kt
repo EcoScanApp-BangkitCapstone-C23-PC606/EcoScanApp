@@ -17,7 +17,7 @@ import androidx.core.net.toFile
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
-import com.dicoding.econscan.databinding.FragmentMediauploadBinding
+import androidx.lifecycle.ViewModelProvider
 import com.dicoding.econscan.databinding.FragmentUploadBinding
 import com.dicoding.econscan.ui.home.HomeFragment
 import com.dicoding.econscan.utils.rotateBitmap
@@ -27,9 +27,12 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody.Companion.asRequestBody
 import java.io.File
 import java.io.FileOutputStream
+import com.dicoding.econscan.data.util.Result
+import com.dicoding.econscan.utils.reduceFileImage
 
 class UploadFragment : Fragment() {
     private lateinit var binding: FragmentUploadBinding
+    private lateinit var viewModel: UploadViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,23 +40,18 @@ class UploadFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentUploadBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this).get(UploadViewModel::class.java)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        binding.btOpenCamera.setOnClickListener {
-//            startActivity(Intent(requireContext(), CameraActivity::class.java))
-//        }
-//        binding.galleryButton.setOnClickListener {
-//            startGallery()
-//        }
         binding.submit.setOnClickListener {
             uploadImage()
         }
         binding.backButton.setOnClickListener {
-            backList()
+//            backList()
         }
 
         val fileUri = requireActivity().intent.getParcelableExtra<Uri>("selected_image")
@@ -99,27 +97,45 @@ class UploadFragment : Fragment() {
 
             val requestImageFile = compressedFile.asRequestBody("image/jpeg".toMediaTypeOrNull())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
-                "photo",
+                "image",
                 compressedFile.name,
                 requestImageFile
             )
 
+            viewModel.postSampah(imageMultipart).observe(viewLifecycleOwner) {
+                if (it != null) {
+                    when (it) {
+                        is Result.Success -> {
+                            showLoading(false)
+                            Toast.makeText(requireContext(), "Upload success", Toast.LENGTH_SHORT).show()
+//                            processCreate(it.data)
+                        }
+                        is Result.Error -> {
+                            showLoading(false)
+                            Toast.makeText(requireContext(), it.error, Toast.LENGTH_LONG).show()
 
+                        }
+                        is Result.Loading -> {
+                            showLoading(true)
+                        }
+                    }
+                }
+            }
         } ?: run {
             Toast.makeText(requireContext(), "Silakan masukkan berkas gambar terlebih dahulu.", Toast.LENGTH_SHORT).show()
         }
     }
 
-//    private fun processCreate(data: PostStoryResponse) {
+
+//    private fun processCreate(data: UploadViewModel) {
 //        if (data.error) {
-//            Toast.makeText(requireContext(), "Tambah Story Gagal", Toast.LENGTH_LONG).show()
+//            Toast.makeText(requireContext(), "Sampah Predict Gagal", Toast.LENGTH_LONG).show()
 //        } else {
 //            Toast.makeText(
 //                requireContext(),
-//                "Story berhasil dibuat ayok lihat story",
+//                "Lihat Sampah Category",
 //                Toast.LENGTH_LONG
 //            ).show()
-//            // Arahkan ke ListStoryActivity
 //            val intent = Intent(requireContext(), StoryListActivity::class.java)
 //            startActivity(intent)
 //            requireActivity().finish()

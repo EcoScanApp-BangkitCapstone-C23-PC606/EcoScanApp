@@ -1,4 +1,18 @@
 package com.dicoding.econscan.utils
 
-class extend {
+import android.widget.ImageView
+import androidx.databinding.BindingAdapter
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import coil.load
+
+@BindingAdapter("loadImage")
+fun ImageView.loadImage(url: String?) {
+    this.load(url) {
+        crossfade(true)
+        placeholder(CircularProgressDrawable(context).apply {
+            strokeWidth = 5f
+            centerRadius = 30f
+            start()
+        })
+    }
 }

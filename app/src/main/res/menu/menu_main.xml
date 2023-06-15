@@ -17,6 +17,13 @@
         app:iconTint="@color/white"
         app:showAsAction="ifRoom"/>
 
+    <item
+        android:id="@+id/navigation_tip"
+        android:icon="@drawable/ic_baseline_lamp"
+        android:title="Tip"
+        app:iconTint="@color/white"
+        app:showAsAction="ifRoom"/>
+
 
 
 </menu>

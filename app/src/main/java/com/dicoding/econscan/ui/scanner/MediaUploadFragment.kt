@@ -25,8 +25,14 @@ import androidx.core.net.toFile
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.dicoding.econscan.MainActivity
+import com.dicoding.econscan.data.response.PostSampahResponse
+import com.dicoding.econscan.data.util.Result
 import com.dicoding.econscan.databinding.FragmentMediauploadBinding
 import com.dicoding.econscan.ui.home.HomeFragment
+import com.dicoding.econscan.ui.list.AnorganikFragment
+import com.dicoding.econscan.utils.ViewModelFactory
 import com.dicoding.econscan.utils.rotateBitmap
 import com.dicoding.econscan.utils.uriToFile
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -37,14 +43,18 @@ import java.io.FileOutputStream
 
 class MediaUploadFragment : Fragment() {
     private lateinit var binding: FragmentMediauploadBinding
+    private lateinit var viewModel: UploadViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         binding = FragmentMediauploadBinding.inflate(inflater, container, false)
+        viewModel = ViewModelProvider(this, ViewModelFactory(requireActivity().application)).get(UploadViewModel::class.java)
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -73,6 +83,8 @@ class MediaUploadFragment : Fragment() {
             getFile = uri.toFile()
             binding.uploadImage.setImageBitmap(result)
         }
+
+
     }
 
     private var getFile: File? = null
@@ -106,32 +118,46 @@ class MediaUploadFragment : Fragment() {
 
             val requestImageFile = compressedFile.asRequestBody("image/jpeg".toMediaTypeOrNull())
             val imageMultipart: MultipartBody.Part = MultipartBody.Part.createFormData(
-                "photo",
+                "image",
                 compressedFile.name,
                 requestImageFile
             )
-
-
+            viewModel.postSampah(imageMultipart).observe(viewLifecycleOwner) {
+                if (it != null) {
+                    when (it) {
+                        is Result.Success -> {
+                            showLoading(false)
+                            Toast.makeText(requireContext(), "Upload success", Toast.LENGTH_SHORT).show()
+                            processCreate(it.data)
+                        }
+                        is Result.Error -> {
+                            showLoading(false)
+                            Toast.makeText(requireContext(), it.error, Toast.LENGTH_LONG).show()
+                        }
+                        is Result.Loading -> {
+                            showLoading(true)
+                        }
+                    }
+                } }
         } ?: run {
             Toast.makeText(requireContext(), "Silakan masukkan berkas gambar terlebih dahulu.", Toast.LENGTH_SHORT).show()
         }
     }
 
-//    private fun processCreate(data: PostStoryResponse) {
-//        if (data.error) {
-//            Toast.makeText(requireContext(), "Tambah Story Gagal", Toast.LENGTH_LONG).show()
-//        } else {
-//            Toast.makeText(
-//                requireContext(),
-//                "Story berhasil dibuat ayok lihat story",
-//                Toast.LENGTH_LONG
-//            ).show()
-//            // Arahkan ke ListStoryActivity
-//            val intent = Intent(requireContext(), StoryListActivity::class.java)
-//            startActivity(intent)
-//            requireActivity().finish()
-//        }
-//    }
+    private fun processCreate(data: PostSampahResponse) {
+        if (data.error) {
+            Toast.makeText(requireContext(), "Sampah Predict Gagal ", Toast.LENGTH_LONG).show()
+        } else {
+            Toast.makeText(
+                requireContext(),
+                "Sampah bisa ",
+                Toast.LENGTH_LONG
+            ).show()
+            val intent = Intent(requireContext(), AnorganikFragment::class.java)
+            startActivity(intent)
+            requireActivity().finish()
+        }
+    }
 
     private fun showLoading(state: Boolean) {
         binding.pbCreateStory.isVisible = state
