@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tips Mengelolah Sampah Dengan Benar"
+            android:textColor="#000"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="80dp">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reuse"
+                android:id="@+id/tv_reuse"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_below="@+id/view_1"
+                android:layout_marginLeft="55dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:id="@+id/ib_reuse"
+                android:src="@drawable/reuse"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reduse"
+                android:id="@+id/tv_reduse"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:layout_below="@+id/view_1"
+                android:layout_marginLeft="55dp"
+                android:fontFamily="sans-serif-black"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:id="@+id/ib_reduse"
+                android:src="@drawable/reduce"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="280dp">
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recycle"
+                    android:id="@+id/tv_recycle"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:layout_below="@+id/view_1"
+                    android:layout_marginLeft="55dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/ib_recycle"
+                    android:src="@drawable/recycle"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ecobrick"
+                    android:id="@+id/tv_eco"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:layout_below="@+id/view_1"
+                    android:layout_marginLeft="55dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:id="@+id/ib_eco"
+                    android:src="@drawable/ecobrick"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

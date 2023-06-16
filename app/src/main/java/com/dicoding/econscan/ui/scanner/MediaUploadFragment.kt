@@ -32,6 +32,7 @@ import com.dicoding.econscan.data.util.Result
 import com.dicoding.econscan.databinding.FragmentMediauploadBinding
 import com.dicoding.econscan.ui.home.HomeFragment
 import com.dicoding.econscan.ui.list.AnorganikFragment
+import com.dicoding.econscan.ui.list.OrganikFragment
 import com.dicoding.econscan.utils.ViewModelFactory
 import com.dicoding.econscan.utils.rotateBitmap
 import com.dicoding.econscan.utils.uriToFile
@@ -153,7 +154,13 @@ class MediaUploadFragment : Fragment() {
                 "Sampah bisa ",
                 Toast.LENGTH_LONG
             ).show()
-            val intent = Intent(requireContext(), AnorganikFragment::class.java)
+            val intent = when(data.className){
+                "organic" -> Intent(requireContext(), OrganikFragment::class.java)
+                "non-organic" -> Intent(requireContext(), AnorganikFragment::class.java)
+                else -> {
+                    Intent(requireContext(), MediaUploadFragment::class.java)
+                }
+            }
             startActivity(intent)
             requireActivity().finish()
         }

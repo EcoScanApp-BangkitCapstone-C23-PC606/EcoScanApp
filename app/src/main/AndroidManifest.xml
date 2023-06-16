@@ -34,9 +34,9 @@
         <activity
             android:name=".ReuseActivity"
             android:exported="false" />
-        <activity
-            android:name=".activity_reuse"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".activity_reuse"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".SplashActivity"
             android:exported="true">

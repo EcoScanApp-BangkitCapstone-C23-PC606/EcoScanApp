@@ -3,9 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/drawable/border.xml" value="0.1" />
         <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_anorganik.xml" value="0.1125" />
-        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_ecobrick.xml" value="0.1125" />
-        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_anorganik.xml" value="0.25" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_camera.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_ecobrick.xml" value="0.1" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_halaman_hasil.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_main.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_recycle.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/activity_tip.xml" value="0.1" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_anorganik.xml" value="0.1" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_home.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_mediaupload.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_organik.xml" value="0.1" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_tip.xml" value="0.17552083333333332" />
+        <entry key="..\:/DATA/Data Kuliah/SIB-Google Bangkit Batch 1 2023/EcoScanApp/app/src/main/res/layout/fragment_upload.xml" value="0.17552083333333332" />
         <entry key="..\:/New folder/androidstudio tugas magang/EcoScan/app/src/main/res/layout/activity_anorganik.xml" value="0.15677083333333333" />
         <entry key="..\:/New folder/androidstudio tugas magang/EcoScan/app/src/main/res/layout/activity_camera.xml" value="0.1" />
         <entry key="..\:/New folder/androidstudio tugas magang/EcoScan/app/src/main/res/layout/activity_halaman_hasil.xml" value="0.2" />

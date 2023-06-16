@@ -29,10 +29,10 @@ class HomeFragment : Fragment() {
 
         // Create some dummy data
         val items = listOf(
-            SampahItem(R.drawable.rectangle_40, "Peraturan Tentang Sampah", "Pengelolaan sampah di Indonesia diatur dalam Undang-Undang Nomor 18 Tahun 2008 tentang Pengelolaan Sampah."),
-            SampahItem(R.drawable.rectangle_40, "Tempat Penampungan Sementara (TPS)", "TPS yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan/atau tempat pengolahan sampah terpadu. Dari TPS, sampah akan diangkut dan dibawa oleh Dinas Lingkungan menggunakan truk sampah ke Tempat Pemrosesan Akhir (TPA). TPA adalah tempat untuk memproses dan mengembalikan sampah ke media lingkungan secara aman bagi manusia dan lingkungan."),
-            SampahItem(R.drawable.rectangle_40, "Pengelolaan Sampah", "Pengelolaan sampah di Indonesia dibagi menjadi dua, pertama yaitu pengelolaan sampah rumah tangga dan sampah sejenis sampah rumah tangga dan kedua yaitu pengelolaan sampah spesifik"),
-            SampahItem(R.drawable.rectangle_40, "Peran Masyarakat", "Peran masyarakat antara lain pemberian usul, pertimbangan, dan saran kepada pemerintah pusat dan pemerintah daerah, perumusan kebijakan pengelolaan sampah, dan/atau pemberian saran dan pendapat dalam penyelesaian sengketa persampahan."),
+            SampahItem(R.drawable.sampah1, "Peraturan Tentang Sampah", "Pengelolaan sampah di Indonesia diatur dalam Undang-Undang Nomor 18 Tahun 2008 tentang Pengelolaan Sampah."),
+            SampahItem(R.drawable.sampah2, "Tempat Penampungan Sementara (TPS)", "TPS yaitu tempat sebelum sampah diangkut ke tempat pendauran ulang, pengolahan, dan/atau tempat pengolahan sampah terpadu. Dari TPS, sampah akan diangkut dan dibawa oleh Dinas Lingkungan menggunakan truk sampah ke Tempat Pemrosesan Akhir (TPA). TPA adalah tempat untuk memproses dan mengembalikan sampah ke media lingkungan secara aman bagi manusia dan lingkungan."),
+            SampahItem(R.drawable.sampah3, "Pengelolaan Sampah", "Pengelolaan sampah di Indonesia dibagi menjadi dua, pertama yaitu pengelolaan sampah rumah tangga dan sampah sejenis sampah rumah tangga dan kedua yaitu pengelolaan sampah spesifik"),
+            SampahItem(R.drawable.sampah4, "Peran Masyarakat", "Peran masyarakat antara lain pemberian usul, pertimbangan, dan saran kepada pemerintah pusat dan pemerintah daerah, perumusan kebijakan pengelolaan sampah, dan/atau pemberian saran dan pendapat dalam penyelesaian sengketa persampahan."),
             // Add more items here
         )
 
